@@ -1,0 +1,10 @@
+import numpy as np
+arr = np.arange(20).reshape(4,5)
+print('创建的数组:\n', arr)
+print('数组的和:', np.sum(arr))
+print('数组纵轴的和:', np.sum(arr, axis = 0))
+print('数组横轴的和:', np.sum(arr, axis = 1))
+print('数组的均值:', np.mean(arr))
+print('数组横轴的均值:', np.mean(arr, axis = 1))
+print('数组的标准差:', np.std(arr))
+print('数组横轴的标准差:', np.std(arr, axis = 1))

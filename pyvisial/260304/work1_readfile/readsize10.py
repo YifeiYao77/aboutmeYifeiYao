@@ -1,0 +1,5 @@
+file=open('word.txt',mode='r',encoding="gbk")
+content=file.read(10)
+print(content)
+file.close()
+print(type(content))
