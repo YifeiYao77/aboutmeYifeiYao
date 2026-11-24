@@ -1,0 +1,6 @@
+--视图
+create view try_shaixuansex
+as
+select Sname,Sno
+from Student
+where Ssex='女';

@@ -1,0 +1,3 @@
+select s1.*,s2.*
+from Student s1,Student s2
+where s1.Sdept=s2.Sdept and s2.Sname='小红';

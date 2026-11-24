@@ -1,0 +1,4 @@
+select Sname,count(Cno)
+from student,sc
+where Student.Sno=sc.Sno
+Group by Sname

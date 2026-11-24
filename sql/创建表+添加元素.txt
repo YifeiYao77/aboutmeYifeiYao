@@ -1,0 +1,52 @@
+CREATE TABLE Course
+(Cno CHAR(4) PRIMARY KEY,
+Cname CHAR(40) NOT NULL,
+Cpno CHAR(4),
+Ccredit SMALLINT,
+FOREIGN KEY (Cpno) REFERENCES Course(Cno)
+);
+
+CREATE TABLE Student
+(Sno CHAR(9) PRIMARY KEY,
+Sname CHAR(20) UNIQUE,
+Ssex CHAR(2),
+Sage INT,
+Sdept CHAR(20)
+);
+
+create table sc
+(Sno char(9),
+Cno char(4),
+grade smallint,
+primary key(Sno,Cno),
+foreign key (Sno) references Student(Sno),
+foreign key (Cno) references Course(Cno));
+
+insert 
+into Student 
+values('2021001','mok','女',18,'DS'),
+('2021002','asda','女',19,'CS'),
+('2021013','jake','男',19,'DL'),
+('2021039','sdfs','女',18,'DS'),
+('2021022','mld','男',20,'HJ');
+
+insert 
+into Course 
+values('1','数据库',null,'4'),
+('2','python',null,'3'),
+('3','高等数学',null,'4'),
+('4','概率论',3,'3'),
+('5','大数据架构',2,'3'),
+('6','sql应用',1,'4');
+
+insert 
+into sc 
+values('2021001','1',96),
+('2021001','2',95),
+('2021001','3',98),
+('2021002','1',97),
+('2021002','2',80),
+('2021002','5',79),
+('2021022','4',85),
+('2021039','5',66),
+('2021013','1',88);
